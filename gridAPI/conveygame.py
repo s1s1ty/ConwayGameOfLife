@@ -8,15 +8,14 @@ import copy
 
 """
 
-
 class ConveyGameLife(object):
 	""" Implementation of comway game of life """
-	def __init__(self, am, row, col):
+	def __init__(self, am, row, col, mod):
 		self.am = am
 		self.r = row
 		self.c = col
-		# self.modify_am = copy.copy(am)
-		self.modify_am = [[1,1,1],[0,1,0],[1,0,0]] # bcz of python deep and sallow copy
+		# self.modify_am = copy.copy(am) # not working here
+		self.modify_am = mod # bcz of python deep and sallow copy
 
 	def state_check(self):
 		for i in range(self.r):
